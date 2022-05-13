@@ -6,6 +6,9 @@
   scroll-behavior: smooth;
   background: #000000;
 }
+html, body{
+  overflow-x: hidden;
+}
 body {
   background-color: #000000;
 }
@@ -51,7 +54,7 @@ img {
   transition: color 0.3s ease;
 }
 #menuToggle a:hover {
-  color: tomato;
+  color: rgb(2, 117, 162);
 }
 #menuToggle input {
   display: block;
@@ -411,7 +414,7 @@ h1 {
 
 #about h1 {
   text-align: center;
-  color: white;
+  color: rgb(2, 117, 162);
   font-size: 5rem;
   font-weight: bold;
 }
@@ -421,6 +424,14 @@ h1 {
 }
 #about img {
   border: 2px solid white;
+}
+.col-md-6.tilt {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: bottom 20px;
+   transform: rotate(5deg); 
+   translate(105px, -95px);
 }
 /* chat */
 .card-bordered {
@@ -734,7 +745,7 @@ textarea {
   min-height: 100vh;
 }
 #education h1 {
-  color: white;
+  color: rgb(2, 117, 162);
   font-size: 5rem;
   text-align: center;
   font-weight: bold;
@@ -875,11 +886,14 @@ textarea {
 /* End of timeline */
 /* Beginning of skills */
 #skills {
+  
   min-height: 100vh;
+  justify-content: center;
+  align-content: center;
 }
 #skills h1 {
   text-align: center;
-  color: white;
+  color: rgb(2, 117, 162);
   font-size: 5rem;
   font-weight: bold;
   margin-bottom: 50px;
@@ -888,6 +902,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right:40px;
 }
 #skills li {
   color: white;
@@ -903,12 +918,10 @@ textarea {
   width: 400px;
   margin-bottom: 30px;
 }
+
 i {
   font-size: 100px;
   color: white;
-}
-i:hover {
-  background-color: #0071bd;
 }
 
 i.fa-brands {
@@ -935,7 +948,7 @@ i.fa-brands {
 #projects h1 {
   font-size: 5rem;
   font-weight: bold;
-  color: white;
+  color: rgb(2, 117, 162);
   text-align: center;
   margin-bottom: 100px;
 }
@@ -966,7 +979,7 @@ div.card {
 }
 .carousel-item p {
   color: #ccc;
-  margin-left: 250px;
+  margin-top: 250px;
 }
 .carousel-item img {
   height: 400px;
@@ -997,7 +1010,7 @@ div.carousel-indicators {
   font-size: 5rem;
   font-weight: bold;
   text-align: center;
-  color: white;
+  color: rgb(2, 117, 162);
   margin-bottom: 100px;
 }
 
@@ -1007,28 +1020,28 @@ div.carousel-indicators {
   min-height: 70vh;
 }
 #contact h2 {
-  color: white;
+  color: rgb(2, 117, 162);
   text-align: center;
   font-size: 5rem;
   font-weight: bold;
   margin-bottom: 50px;
 }
-form {
+.form_cnt {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
 }
-form .btn {
-  width: 100px;
+
+.form_cnt .btns {
+  width: 200px;
   color: white;
   border: 1px solid white;
   font-size: 2rem;
   margin-left: 10px;
 }
-form .btn:hover {
-  background: white;
+.form_cnt .btns:hover {
+  background-color: rgb(2, 117, 162);
   color: black;
   border: none;
 }
@@ -1096,6 +1109,10 @@ form .btn:hover {
     justify-content: center;
     align-items: center;
   }
+  .carousel-item p {
+    color: #ccc;
+    margin-left: 0;
+}
 }
 @media (max-width: 768px) {
   #skills .container {
@@ -1110,6 +1127,9 @@ form .btn:hover {
     text-align: center;
     padding: 5px;
   }
+  .carousel-item p {
+    color: #ccc;
+    margin-left: 0;
 }
 @media (max-width: 556px) {
   #about .row img {
@@ -1118,10 +1138,37 @@ form .btn:hover {
     margin-inline: -80%;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   #about {
     min-height: 80vh;
   }
+  #about img.avatar{
+width: 15px;
+height: 15px;
+  }
+  #about .fa-paper-plane:before {
+  width: 150px;
+  height: 150px;
+}
+#about div.publisher.bt-i.border-light{
+  padding: 0px
+}
+#about i.fa.fa.paperclip.file-browser::before{
+  padding: 0px
+  
+}
+#about div.publisher.bt-1.border-light{
+  width: 20px;
+  height:20px;
+}
+#about img.avatar.avatar-xs {
+  width:20px ;
+  height: 20px;
+
+}
+.skillscolumn{
+  padding-left:25%
+}
   #about .row img {
     width: 250px;
     height: 250px;
@@ -1136,7 +1183,21 @@ form .btn:hover {
   #skills .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+  .skillscolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+#skills .row {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
   #projects .row div.col-md-4 {
     display: flex;
     align-items: center;
