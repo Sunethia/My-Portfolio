@@ -961,6 +961,10 @@ i.fa-brands {
   opacity: 0;
   transition: all 0.3s linear;
 }
+.card-details h4{
+  font-size: 3rem;
+  text-align: center;
+}
 
 .card:hover .card-details {
   opacity: 1;
@@ -1007,13 +1011,19 @@ div.card {
   margin-top: 250px;
 }
 .carousel-item img {
-  height: 400px;
-  width: 450px;
+  height: 500px;
+  width: 100%;
   border-radius: 50%;
   border: 3px solid white;
+  object-fit: cover;
 }
-.carousel-caption {
+.carousel-caption  {
   background-color: transparent;
+}
+.carousel-caption p:hover{
+  display: block;
+  color: black;
+
 }
 h5.name {
   font-size: 4rem;
@@ -1026,6 +1036,7 @@ h5 {
   color: rgb(255, 255, 255);
   font-size: 25px;
   font-weight: bold;
+  font-size: 18px;
 }
 div.carousel-indicators {
   background-color: transparent;
@@ -1037,6 +1048,11 @@ div.carousel-indicators {
   text-align: center;
   color: rgb(2, 117, 162);
   margin-bottom: 100px;
+}
+.carousel-item{
+  display: flex;
+  flex-direction: column;
+  gap: 10PX;
 }
 
 /* end of testimonials */
@@ -1069,6 +1085,9 @@ div.carousel-indicators {
   background-color: rgb(2, 117, 162);
   color: black;
   border: none;
+}
+.carousel-item img {
+  object-fit: cover;
 }
 /* end of contact */
 /* beginning of footer */
@@ -1156,10 +1175,15 @@ div.carousel-indicators {
     color: #ccc;
     margin-left: 0;
 }
+#skills .col-md-6 {
+  display: flex;
+  gap: 10px;
+}
+}
 @media (max-width: 556px) {
   #about .row img {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     margin-inline: -80%;
   }
   .ellipses__outer--thick{
@@ -1167,8 +1191,28 @@ div.carousel-indicators {
   }
   .ellipses-container h1{
     margin-left: 0;
-    transform: rotate(-90deg);
     font-size: 2rem;
+  }
+}
+@media (max-width: 448px) {
+  #skills .col-md-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #skills .card {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #skills .card h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media (max-width: 376px) {
